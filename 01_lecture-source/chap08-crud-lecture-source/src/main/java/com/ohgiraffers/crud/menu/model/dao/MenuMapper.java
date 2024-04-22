@@ -14,7 +14,7 @@ public interface MenuMapper {
 
     void registNewMenu(MenuDTO newMenu);
 
-    List<CategoryDTO> updateCategory();
-
     void updateNewMenu(MenuDTO updateMenu);
+
+    void deleteNewMenu(MenuDTO deleteMenu);
 }

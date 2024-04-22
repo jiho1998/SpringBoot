@@ -57,7 +57,7 @@ public class MenuController {
         return "redirect:/menu/list";
     }
 
-    @GetMapping("/update")
+    @GetMapping("/modify")
     public void updatePage() {}
 
     @PostMapping("/update")
@@ -66,6 +66,19 @@ public class MenuController {
         menuService.updateNewMenu(updateMenu);
 
         rttr.addFlashAttribute("successMessage", "메뉴 수정에 성공!");
+
+        return "redirect:/menu/list";
+    }
+
+    @GetMapping("/delete")
+    public void deletePage() {}
+
+    @PostMapping("/delete")
+    public String deleteMenu(MenuDTO deleteMenu, RedirectAttributes rttr) {
+
+        menuService.deleteNewMenu(deleteMenu);
+
+        rttr.addFlashAttribute("successMessage", "메뉴 삭제에 성공!");
 
         return "redirect:/menu/list";
     }

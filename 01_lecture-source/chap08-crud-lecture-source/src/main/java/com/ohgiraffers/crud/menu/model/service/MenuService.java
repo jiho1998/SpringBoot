@@ -33,14 +33,15 @@ public class MenuService {
         menuMapper.registNewMenu(newMenu);
     }
 
-    public List<CategoryDTO> updateCategory() {
-
-        return menuMapper.updateCategory();
-    }
-
     @Transactional
     public void updateNewMenu(MenuDTO updateMenu) {
 
         menuMapper.updateNewMenu(updateMenu);
+    }
+
+    @Transactional
+    public void deleteNewMenu(MenuDTO deleteMenu) {
+
+        menuMapper.deleteNewMenu(deleteMenu);
     }
 }

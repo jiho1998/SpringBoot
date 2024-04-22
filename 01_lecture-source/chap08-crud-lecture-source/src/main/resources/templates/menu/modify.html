@@ -8,6 +8,7 @@
     <div th:include="common/header.html"></div>
     <h3>메뉴 수정</h3>
     <form action="/menu/update" method="post">
+        <label>메뉴 코드 : </label><input type="number" name="code"><br>
         <label>메뉴 이름 : </label><input type="text" name="name"><br>
         <label>메뉴 가격 : </label><input type="number" name="price"><br>
         <label>카테고리 코드 : </label>

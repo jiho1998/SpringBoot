@@ -62,4 +62,10 @@
             , CATEGORY_CODE = #{ categoryCode }
         WHERE MENU_CODE = #{ code }
     </update>
+
+    <delete id="deleteNewMenu" parameterType="_int">
+        DELETE
+        FROM TBL_MENU
+        WHERE MENU_CODE = #{ code }
+    </delete>
 </mapper>
